@@ -7,6 +7,21 @@ The original creator of IKAnalyzer is [Liang-Yi Lin ](linliangyi2007@gmail.com) 
 
 # Installation  #
 
+## Build with docker
+
+```
+$ docker run --rm -it --name mvn  maven:3.5.0-jdk-8 bash
+$ git clone https://github.com/jungleran/ik-analyzer-solr5.git
+$ cd ik-analyzer-solr5
+$ mvn clean install
+$ ls target/ik-analyzer-solr5-5.x.jar
+```
+Open a new terminal
+
+```
+$ docker cp mvn:/root/ik-analyzer-solr5/target/ik-analyzer-solr5-5.x.jar .
+```
+
  - JDK8 
 
 >  mvn clean install
